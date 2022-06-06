@@ -1,14 +1,14 @@
 name: newLabel_issue
 on:
-	issues:
-		types: [opened]
-	label:
-		types: [created]
-		
+  issues:
+    types: [opened]
+  labels:
+    types: [created]
+
 jobs:
-	sample_action: info
-		runs-on: ubuntu-latest 
-		steps:
-			-name: print_info
-			 run: echo 'Trigger ${{github.event_name}}, user ${{github.actor}}, date  $(date +'%Y-%m-%d')'
-		
+  sample_action:
+  runs-on: ubuntu-latest 
+  steps:
+    -name: print_info
+     run: echo 'Trigger ${{github.event_name}}, user ${{github.actor}}, date  $(date +'%Y-%m-%d')'
+
